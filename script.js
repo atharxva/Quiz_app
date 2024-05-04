@@ -33,4 +33,18 @@ const questions = [
             { text: "Chennai", correct: false},
         ]
     },
-]
+];
+
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answerbutton");
+const nextButton = document.getElementById("next");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score=0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
